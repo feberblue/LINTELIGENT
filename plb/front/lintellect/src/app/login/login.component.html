@@ -1,0 +1,56 @@
+<section id="wrapper" class="login-register login-sidebar">
+  <div class="login-box2" style="height: 100%;background-image: url(assets/background.jpg);border: 0px !important; position: fixed">
+  </div>
+  <div class=" login-box card" style="border: 0px !important">
+    <div class="card-body">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-horizontal text-center">
+        <div class="form-group">
+          <label style="font-size: 35px; padding-top: 90px">LINTELLECT</label><br>
+          <label style="color:#CCC">Welcome! Please login to your account.</label>
+          <div class="card" style="border: 0px !important">
+            <div class="card-body">
+              <div class="row" style="padding: 10px">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" formControlName="username" id="username" autocomplete="off">
+                  <div class="error" *ngIf="loginForm.controls['username'].hasError('required') && loginForm.controls['username'].touched">Username
+                    is required</div>
+                </div>
+                <div class="col-md-3"></div>
+              </div>
+              <div class="row" style="padding: 10px">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                  <input type="password" class="form-control" formControlName="password" id="pwd" autocomplete="off">
+                  <div class="error" *ngIf="loginForm.controls['password'].hasError('required') && loginForm.controls['password'].touched">Password
+                    is required</div>
+                </div>
+                <div class="col-md-3"></div>
+              </div>
+              <div class="row" style="padding:40px">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                  <input type="checkbox" name="remember" id="remember" class="" /> Remember Me
+                </div>
+                <div class="col-md-3">
+                  Forgot Password
+                </div>
+                <div class="col-md-3"></div>
+              </div>
+              <div class="row" style="padding: 40px;">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                  <button type="submit" style="width: 80%" class="btn btn-primary">LogIn</button>
+                </div>
+                <div class="col-md-3">
+                  <button type="button" style="width: 80%" class="btn btn-outline-dark">Sign Up</button>
+                </div>
+                <div class="col-md-3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,35 @@
+<div style="padding:10px">
+  <div class="card">
+    <div class="card-header">
+      CATEGORIAS
+      <button name="btnAdd" id="btnAdd" class="btn btn-primary" > + </button>
+    </div>
+    <div class="card-body">
+      <table class="table table-light table-striped table-hover table-sm">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of arrayCategoria">
+            <td>
+              {{item.nombre}}
+            </td>
+            <td>
+              {{item.estado}}
+            </td>
+            <td>
+              <button name="" id="" class="btn btn-primary">Editar</button>
+              <button name="" id="" class="btn btn-danger">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</div>
